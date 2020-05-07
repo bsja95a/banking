@@ -29,7 +29,7 @@ public class Main {
 				//login to the bank
 			}
 			else if (option == 3) {
-				System.out.println("Existing - Goodbye");
+				System.out.println("Exiting - Goodbye");
 				System.exit(0);
 			}
 			else {
