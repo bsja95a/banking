@@ -10,6 +10,7 @@ public class Main {
 		System.out.println("1 - Join the bank");
 		System.out.println("2 - Login to your bank account");
 		System.out.println("3 - Exit the bank");
+		System.out.println("4 - Currency conversion");
 
 		Selection();
 	}
@@ -40,10 +41,12 @@ public class Main {
 				number = sc.nextLine();
 				System.out.println("Please enter your email");
 				email = sc.nextLine();
+				validation v = new validation(name, addresses, dob, number, email);
 
-
-				NewAccount a = new NewAccount(name, addresses, dob, number, email);
-				System.out.println(a);
+//				if(v.equals(1)){
+					addAccount a = new addAccount(name, addresses, dob, number, email);
+					Main.main(null);
+//				}
 
 			}
 			else if (option == 2) {
@@ -53,6 +56,9 @@ public class Main {
 				System.out.println("Exiting - Goodbye");
 				System.exit(0);
 			}
+			else if (option == 4){
+			    new currency();
+            }
 			else {
 				System.out.println("Please select a valid option");
 				Main.main(null);
